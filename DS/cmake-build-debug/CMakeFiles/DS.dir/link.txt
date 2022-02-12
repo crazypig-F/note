@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/DS.dir/linerList/test.c.o CMakeFiles/DS.dir/tree/test.c.o -o DS 

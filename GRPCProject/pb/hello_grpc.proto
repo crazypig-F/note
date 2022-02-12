@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package service;
+option go_package="/service";
+
+// define a service
+service CrazyPigService {
+  // define the interface and data type
+  rpc SayHello (NameRequest) returns (NameReply) {}
+}
+
+// define the data type of request
+message NameRequest {
+  string name = 1;
+}
+
+// define the data type of response
+message NameReply {
+  string message = 1;
+}

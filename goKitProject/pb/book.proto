@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package service;
+option go_package = "/book";
+
+// define a service
+service BookService {
+  // define the interface and data type
+  rpc GetBookName (NameRequest) returns (NameReply){}
+  rpc GetBookNum (NumRequest) returns (NumReply){}
+}
+
+// define the data type of request
+message NameRequest {}
+
+// define the data type of response
+message NameReply {
+  repeated string message = 1;
+}
+
+message NumRequest{
+  string name = 1;
+}
+
+message NumReply{
+  int32 num = 1;
+}
+
